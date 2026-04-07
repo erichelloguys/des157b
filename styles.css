@@ -5,15 +5,19 @@
 
 img {
     max-width: 100%;
-    display: block;
     height: auto;
+    display: block;
+    margin: auto;
 }
 
 /* Page styling */
 body {
-    background-color: #333;
-    color: rgb(235, 235, 235);
-    transition: all 2s;
+    margin: auto;
+    padding: 0;
+    background-image: url("images/studioBG1.png");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
 }
 
 body.switch {
@@ -26,45 +30,94 @@ body.switch {
     width: 100%;
     max-width: 1366px;
     /* make sure the columns don't get too small and text stays readable */
-    min-width: 900px;
-    margin: 1em auto;
-    padding-top: 2em;
+    margin: 0 auto;
+    padding-top: 1em;
+}
+
+#nav-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+
+    justify-content: center;
+    justify-items: center;
 }
 
 header {
     margin: 0 auto 2em auto;
 }
 
+header, body {
+    text-align: center;
+}
+
 #banner {
-    position: relative;
-    display: flex;
-    width: 1100px;
-    height: 250px;
+    position: relative; 
     margin: auto;
-    background-color: rgb(235, 235, 235);
-    color: #333;
-    overflow: hidden;
-    display: grid;
+    
+    background-image: url("images/studioBG1.png");
+    background-size: cover;
+    background-position:center;
+    background-repeat: no-repeat;
+
+    align-items: center;
 	place-items: center;
 }
 
 #banner.switch {
-    background-color: #333;
+    background-image: url("images/studioBG2.png");
     color: rgb(235, 235, 235);
     transition: all 2s;
 }
 
 main {
-    display: flex;
-    justify-content: space-evenly;
+    display: block;
+    justify-content: center;
     margin: 1em auto;
 }
 
 main section {
-    flex: 1;
-    border: 1px rgb(235, 235, 235) dashed;
-    margin: 0 .25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    aspect-ratio: 2/3;
+    width: 100%;
+    max-width: 300px;
+
+    border: 2px rgb(0, 0, 0) dashed;
+    border-radius: 15px;
     padding: 1em;
+
+    position: relative;
+}
+
+#projects {
+        background-image: url("images/cardSpade2.png");
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+}
+
+#research {
+        background-image: url("images/cardQ.png");
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+}
+
+#development {
+        background-image: url("images/cardClub2.png");
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
+}
+
+#capstone {
+        background-image: url("images/card6.png");
+        background-size: cover;
+        background-position:center;
+        background-repeat: no-repeat;
 }
 
 a {
@@ -77,8 +130,8 @@ nav ol, nav ul {
     padding-left: 0;
 }
 
-section li {
-    padding-left: 1.2em;
+section {
+    margin-top: 1em;
 }
 
 section a {
@@ -125,4 +178,45 @@ button.switch {
 button.switch:hover {
     background-color: #333;
     color: rgb(235, 235, 235)
+}
+
+body.switch {
+    background-image: url("images/studioBG2.png");
+}
+
+#projects.switch {
+    background-image: url("images/card1.png");
+}
+
+#research.switch {
+    background-image: url("images/card5.png");
+}
+
+#development.switch {
+    background-image: url("images/card7.png");
+}
+
+#capstone.switch {
+    background-image: url("images/card8.png");
+}
+
+@media only screen and (min-width: 600px) {
+
+    h1, h2, h3 {
+        font-family: "Rubik 80s Fade", system-ui;;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    h2 {
+        font-family: "Rubik 80s Fade", system-ui;;
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    h3 {
+        font-family: "Rubik 80s Fade", system-ui;;
+        font-weight: 200;
+        font-style: normal;
+    }
 }
