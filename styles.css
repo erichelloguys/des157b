@@ -13,11 +13,13 @@ img {
 /* Page styling */
 body {
     margin: auto;
-    padding: 0;
+    width: 100%;
+    height: auto;
+    padding: 1em;
     background-image: url("images/studioBG1.png");
     background-size: cover;
-    background-position:center;
-    background-repeat: no-repeat;
+    background-position:center center;
+    background-repeat: repeat;
 }
 
 body.switch {
@@ -47,27 +49,46 @@ header {
     margin: 0 auto 2em auto;
 }
 
-header, body {
+header, footer {
+    top: 0;
     text-align: center;
+    padding: 25px;
+    margin: auto;
+    position: relative;
+}
+
+footer p {
+    margin: none;
+    padding: none;
 }
 
 #banner {
+
+    padding: 20px;
+    width: auto;
+    height: auto;
+    position: absolute;
+
     position: relative; 
-    margin: auto;
-    
-    background-image: url("images/studioBG1.png");
+    width: 100%;
+    height: 25%;
+
+    background-image: url("images/studioBGPure2.png");
+
     background-size: cover;
     background-position:center;
     background-repeat: no-repeat;
 
     align-items: center;
 	place-items: center;
+
+    transition: all 2s;
 }
 
 #banner.switch {
-    background-image: url("images/studioBG2.png");
+    background-image: url("images/studioBGPure1.png");
+    
     color: rgb(235, 235, 235);
-    transition: all 2s;
 }
 
 main {
@@ -76,46 +97,30 @@ main {
     margin: 1em auto;
 }
 
-main section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    aspect-ratio: 2/3;
-    width: 100%;
-    max-width: 300px;
-
-    border: 2px rgb(0, 0, 0) dashed;
-    border-radius: 15px;
-    padding: 1em;
-
-    position: relative;
-}
-
 #projects {
         background-image: url("images/cardSpade2.png");
-        background-size: cover;
+        background-size: contain;
         background-position:center;
         background-repeat: no-repeat;
 }
 
 #research {
         background-image: url("images/cardQ.png");
-        background-size: cover;
+        background-size: contain;
         background-position:center;
         background-repeat: no-repeat;
 }
 
 #development {
         background-image: url("images/cardClub2.png");
-        background-size: cover;
+        background-size: contain;
         background-position:center;
         background-repeat: no-repeat;
 }
 
 #capstone {
         background-image: url("images/card6.png");
-        background-size: cover;
+        background-size: contain;
         background-position:center;
         background-repeat: no-repeat;
 }
@@ -130,8 +135,39 @@ nav ol, nav ul {
     padding-left: 0;
 }
 
-section {
-    margin-top: 1em;
+main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    aspect-ratio: 2/3;
+    width: 100%;
+    max-width: 300px;
+
+    /*border: 2px rgb(0, 0, 0) dashed;*/
+    border-radius: 15px;
+
+    position: relative;
+    transition: all 1s;
+}
+
+h1, h2, h3 {
+    font-family: "Rubik 80s Fade", system-ui;;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Rubik 80s Fade", system-ui;;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h3 {
+    font-family: "Rubik 80s Fade", system-ui;;
+    font-weight: 200;
+    font-style: normal;
 }
 
 section a {
@@ -139,20 +175,34 @@ section a {
     display: inline-block;
     padding: .5em;
     color: orange;
+    border-radius: 50%;
+
+    transition: all 1s;
+    transition: border-radius 0.25s ease;
 }
 
 section a:hover {
     background-color: orange;
     color: #333;
+    border-radius: 0%;
+
+    transition: all 0.25s;
+    transition: border-radius 0.25s ease;
+}
+
+section.switch h3 {
+    color: #bcbcbc;
 }
 
 section.switch a {
-    color: #333;
+    color: #57a2ff;
+    transition: all 1s;
 }
 
 section.switch a:hover {
     background-color: #333;
     color: rgb(235, 235, 235);
+    transition: all 0.25s;
 }
 
 button {
@@ -160,8 +210,12 @@ button {
     top: 20px;
     right: 20px;
     padding: 12px;
-    background-color: orange;
-    color: #333;
+    background-image: url("images/coinSwitch.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+
     border: 1px solid transparent;
 }
 
@@ -182,41 +236,84 @@ button.switch:hover {
 
 body.switch {
     background-image: url("images/studioBG2.png");
+    transition: all 1s;
+
 }
 
 #projects.switch {
     background-image: url("images/card1.png");
+    transition: all 1s;
 }
 
 #research.switch {
     background-image: url("images/card5.png");
+    transition: all 1s;
 }
 
 #development.switch {
     background-image: url("images/card7.png");
+    transition: all 1s;
 }
 
 #capstone.switch {
     background-image: url("images/card8.png");
+    transition: all 1s;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1000px) {
 
-    h1, h2, h3 {
-        font-family: "Rubik 80s Fade", system-ui;;
-        font-weight: 400;
-        font-style: normal;
+    h1 {
+        font-size: clamp(1rem, 3rem, 5rem);
     }
 
     h2 {
-        font-family: "Rubik 80s Fade", system-ui;;
-        font-weight: 300;
-        font-style: normal;
+        font-size: clamp(0.75rem, 1.5rem, 2.25rem);
     }
 
     h3 {
-        font-family: "Rubik 80s Fade", system-ui;;
-        font-weight: 200;
-        font-style: normal;
+        margin-top: 8vh;
+        margin-bottom: 0;
+        font-size: clamp(0.1rem, 1rem, 2rem);
+    }
+
+    .toolKit {
+        margin-top: 5vh
+    }
+
+    section nav {
+        margin-top: -5px;
+
+    }
+
+    section nav a {
+        font-size: clamp(0.25rem, 0.75rem, 1.75rem);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: clamp(1rem, 3rem, 5rem);
+    }
+
+    h2 {
+        font-size: clamp(0.75rem, 1.5rem, 2.25rem);
+    }
+
+    h3 {
+        margin-top: 5vh;
+        font-size: clamp(0.25rem, 0.75rem, 2rem);
+    }
+
+    .toolKit {
+        margin-top: 5vh
+    }
+
+    section nav {
+        margin-top: -20px;
+        margin-bottom: -20px;
+    }
+
+    section nav a {
+        font-size: clamp(0.1rem, 0.65rem, 1.75rem);
     }
 }
