@@ -205,28 +205,33 @@ button {
     top: 20px;
     right: 20px;
     padding: 12px;
-    background-image: url("images/coinSwitch.png");
+    background-image: url("images/coinBlue.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
 
-    border: 1px solid transparent;
+    border: none;
+    width: 150px;
+    height: 150px;
 }
 
 button:hover {
-    background-color: coral;
+    background-image: url("images/coinPink.png");
     cursor: pointer;
 }
 
 button.switch {
-    background-color: rgb(235, 235, 235);
-    border-color: #333;
+    background-image: url("images/coinPink.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
 }
 
 button.switch:hover {
-    background-color: #333;
-    color: rgb(235, 235, 235)
+    background-image: url("images/coinBlue.png");
+    cursor: pointer;
 }
 
 body.switch {
@@ -287,16 +292,16 @@ body.switch {
 
 @media only screen and (max-width: 1000px) {
     h1 {
-        font-size: clamp(1rem, 3rem, 5rem);
+        font-size: clamp(1rem, 2.75rem, 5rem);
     }
 
     h2 {
-        font-size: clamp(0.75rem, 1.5rem, 2.25rem);
+        font-size: clamp(0.75rem, 1.25rem, 2.25rem);
     }
 
     h3 {
         margin-top: 3vh;
-        font-size: clamp(0.25rem, 0.75rem, 2rem);
+        font-size: clamp(0.25rem, 0.8rem, 2rem);
     }
 
     .toolKit {
