@@ -68,22 +68,25 @@ header, footer {
     width: 100%;
     height: 25%;
 
-    background-image: url("images/studioBGPure2.png");
+    background-image: url("images/gamblerCarouselGreen.png");
 
     background-size: cover;
     background-position:center;
     background-repeat: no-repeat;
+    background-size: 115%;
 
     align-items: center;
 	place-items: center;
 
     transition: all 2s;
+
+    color: rgb(189, 189, 189);
 }
 
 #banner.switch {
-    background-image: url("images/studioBGPure1.png");
-    
-    color: rgb(235, 235, 235);
+    background-image: url("images/gamblerCarouselRed.png");
+
+    color: rgb(28, 28, 28);
 }
 
 main {
@@ -292,11 +295,11 @@ body.switch {
 
 @media only screen and (max-width: 1000px) {
     h1 {
-        font-size: clamp(1rem, 2.75rem, 5rem);
+        font-size: clamp(1rem, 2rem, 5rem);
     }
 
     h2 {
-        font-size: clamp(0.75rem, 1.25rem, 2.25rem);
+        font-size: clamp(0.75rem, 1rem, 2.25rem);
     }
 
     h3 {
@@ -315,5 +318,20 @@ body.switch {
 
     section nav a {
         font-size: clamp(0.1rem, 0.65rem, 1.75rem);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: clamp(1rem, 1.5rem, 5rem);
+    }
+
+    h2 {
+        font-size: clamp(0.75rem, 0.75rem, 2.25rem);
+    }
+    
+    button {
+        width: 100px;
+        height: 100px;
     }
 }
