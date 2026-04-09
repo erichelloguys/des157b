@@ -218,12 +218,13 @@ button {
     border: none;
     width: 150px;
     height: 150px;
+    animation: shake 2s ease-in-out infinite;
+
 }
 
 button:hover {
     background-image: url("images/coinPink.png");
     cursor: pointer;
-    animation: shake 1s ease-in-out infinite;
 }
 
 button.switch {
@@ -232,12 +233,13 @@ button.switch {
     background-repeat: no-repeat;
     background-position: center;
     background-color: transparent;
+    animation: shake 2s ease-in-out infinite;
+
 }
 
 button.switch:hover {
     background-image: url("images/coinBlue.png");
     cursor: pointer;
-    animation: shake 1s ease-in-out infinite;
 }
 
 body.switch {
