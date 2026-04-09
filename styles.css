@@ -73,7 +73,7 @@ header, footer {
     background-size: cover;
     background-position:center;
     background-repeat: no-repeat;
-    background-size: 115%;
+    background-size: 100%;
 
     align-items: center;
 	place-items: center;
@@ -223,6 +223,7 @@ button {
 button:hover {
     background-image: url("images/coinPink.png");
     cursor: pointer;
+    animation: shake 1s ease-in-out infinite;
 }
 
 button.switch {
@@ -236,6 +237,7 @@ button.switch {
 button.switch:hover {
     background-image: url("images/coinBlue.png");
     cursor: pointer;
+    animation: shake 1s ease-in-out infinite;
 }
 
 body.switch {
@@ -294,6 +296,32 @@ body.switch {
     }
 }
 
+@keyframes shake {
+    0% {
+       transform: translate(0px, 0px);
+    }
+
+    20% {
+        transform: translate(-10px, -5px);
+    }
+
+    40% {
+        transform: translate(10px, 0px);
+    }
+
+    60% {
+        transform: translate(-10px, -5px);
+    }
+
+    80% {
+        transform: translate(10px, 0px);
+    }
+    
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
 @media only screen and (max-width: 1000px) {
     h1 {
         font-size: clamp(1rem, 2rem, 5rem);
@@ -334,5 +362,25 @@ body.switch {
     button {
         width: 100px;
         height: 100px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    #banner {
+            background-size: 200%;
+
+    }
+
+    h1 {
+        font-size: clamp(0.5rem, 1rem, 1.5rem);
+    }
+
+    h2 {
+        font-size: clamp(0.25rem, 0.5rem, 0.75rem);
+    }
+    
+    button {
+        width: 80px;
+        height: 80px;
     }
 }
