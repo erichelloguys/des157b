@@ -78,7 +78,7 @@ header, footer {
     align-items: center;
 	place-items: center;
 
-    transition: all 2s;
+    transition: all 1s;
 
     color: rgb(189, 189, 189);
 }
@@ -87,6 +87,7 @@ header, footer {
     background-image: url("images/gamblerCarouselRed.png");
 
     color: rgb(28, 28, 28);
+    transition: all 1s;
 }
 
 main {
