@@ -58,15 +58,11 @@ header, footer {
 }
 
 #banner {
-
+    z-index: -2;
     padding: 20px;
     width: auto;
     height: auto;
-    position: absolute;
-
     position: relative; 
-    width: 100%;
-    height: 25%;
 
     background-image: url("images/gamblerCarouselGreen.png");
 
@@ -88,6 +84,26 @@ header, footer {
 
     color: rgb(28, 28, 28);
     transition: all 1s;
+}
+
+#bannerCharacter {
+    z-index: -1;
+    padding: 20%;
+    left: -10%;
+    top: -30%;
+
+    width: auto;
+    height: auto;
+
+    position: absolute;
+    background-image: url("images/lady.png");
+    background-size: contain;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+#bannerCharacter.switch {
+    background-image: url("images/tramp.png");
 }
 
 main {
