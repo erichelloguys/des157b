@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>studio1</title>
+
+    <!-- Normalize CSS for browser compatability -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- My Styles -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Meta tag for mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- My Script -->
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Blockbuster Video!</h1>
+        <h2>Feeding Deer @ Nara</h2>
+    </header>
+
+    <section id="sectionOne">
+
+        <p id="pOne" class="hidden">
+        Look at these unsuspecting deers... I'm going to make them play Squid Games!
+        </p>
+        
+        <!-- <img src="../images/deerAttack.png" id="imgOne" class="hidden" alt="imgOne"> -->
+        
+        <p id="pTwo" class="hidden">
+        Hahahaha! That's right you animals! Bow to me and feast on the crackers!
+        </p>
+
+        <p id="pThree" class="hidden">
+        Wait... chotto matte... there's too many of them! Ah, AHHHHHHHH YAMETE TASUKETE!
+        </p>
+
+        <p id="pFour" class="hidden">
+        Here here! I'll give you the last of my crack! Stop chasing me!
+        </p>
+
+    </section>
+
+    <video id="myVideo" poster="../images/deerAttack.png" controls muted autoplay loop playsinline>
+
+        <source src="../medias/naraDeer.webm" type="video/webm">
+        <source src="../medias/naraDeerHD.mp4" type="video/mp4">
+
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="medias/naraDeerHD.mp4">link to the video</a> instead.
+        </p>
+
+    </video>
+    <i class="fas fa-expand-arrows-alt"></i>
+
+    <footer class="stickyfooter">
+
+    </footer>
+
+</body>
+
+</html>

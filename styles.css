@@ -232,8 +232,6 @@ button {
     background-color: transparent;
 
     border: none;
-    width: 150px;
-    height: 150px;
     animation: shake 2s ease-in-out infinite;
 
 }
@@ -386,7 +384,6 @@ body.switch {
 @media only screen and (max-width: 460px) {
     #banner {
             background-size: 200%;
-
     }
 
     h1 {
