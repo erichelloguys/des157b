@@ -19,6 +19,26 @@
     cursor: pointer;
 }
 
+#shikanoko {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+    z-index: 2;
+    height: auto;
+    max-width: 200px;
+}
+
+header {
+    text-align: center;
+}
+
+body {
+    cursor: url('images/shikasenbei.png'), auto;
+}
+
 section {
     position: relative;
 }
@@ -27,9 +47,16 @@ p {
     padding: 20px;
     position: absolute;
     top: 20%;
-    filter: drop-shadow(10px 10px 10px red);
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+    font-family: "Supermercado One", sans-serif;
     font-size: 50px;
-    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right, #4e7a5350, #639c8150);
+}
+
+.supermercado-one-regular {
+  font-family: "Supermercado One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .hidden {

@@ -4,17 +4,20 @@
 
     const fs = document.querySelector('.fa-expand-arrows-alt');
     
-    fs.addEventListener('click', function() {
-        // The fullscreenElement attribute returns null if the element is in windowed mode
-        if (!document.fullscreenElement) {
-            // document.documentElement returns the Element that is a direct child of the document,   which is the <html> element
-            document.documentElement.requestFullscreen();
-        } else {
-            document.exitFullscreen();
-        }
-    })
+    if (fs) {
+        fs.addEventListener('click', function() {
+            // The fullscreenElement attribute returns null if the element is in windowed mode
+            if (!document.fullscreenElement) {
+                // document.documentElement returns the Element that is a direct child of the document,   which is the <html> element
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        });
+    }
     
-    const mySection = document.querySelector('#mySection');
+    const myVideo = document.querySelector('#myVideo');
+    // const mySection = document.querySelector('#mySection');
     const pOne = document.querySelector('#pOne');
     const pTwo = document.querySelector('#pTwo');
     const pThree = document.querySelector('#pThree');
@@ -47,5 +50,33 @@
             pFour.className = 'hidden';
         }
     }
+
+    const shikanoko = document.querySelector("#shikanoko");
+    const shikanokoRect = shikanoko.getBoundingClientRect();
+    let mouseX = 0;
+    let mouseY = 0;
+    let easing = 0.05;
+
+    let shikanokoX = shikanokoRect.left + window.scrollX;
+    let shikanokoY = shikanokoRect.top + window.scrollY;
+
+    function dist(x1, y1, x2, y2){
+        return Math.hypot(x2 - x1, y2 - y1);
+    }
+
+    window.addEventListener('mousemove', function(e){
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        let mouseDistance = dist(mouseX, mouseY, shikanokoX, shikanokoY);
+
+        if (mouseDistance < 150) {
+            shikanokoX += (mouseX - shikanokoX) * easing;
+            shikanokoY += (mouseY - shikanokoY) * easing;
+
+            shikanoko.style.left = shikanokoX + 'px';
+            shikanoko.style.top = shikanokoY + 'px';
+        }
+    } )
 
 })();
