@@ -17,6 +17,8 @@
     }
     
     const myVideo = document.querySelector('#myVideo');
+
+    const header = document.querySelector('header');
     const pOne = document.querySelector('#pOne');
     const pTwo = document.querySelector('#pTwo');
     const pThree = document.querySelector('#pThree');
@@ -26,27 +28,46 @@
 
     function checkTime() {
         if (2 < myVideo.currentTime && myVideo.currentTime < 7){
-            pOne.className = 'showing';
+            header.classList.add('hidden');
+
+            pOne.classList.add('showing');
+            pOne.classList.remove('hidden');
+            pOne.style.top = "40%";
+            pOne.style.left = "20%";
+
         } else {
-            pOne.className = 'hidden';
+            pOne.classList.add('hidden');
+            pOne.classList.remove('showing');
         }
 
         if (9 < myVideo.currentTime && myVideo.currentTime < 14){
-            pTwo.className = 'showing';
+            pTwo.classList.add('showing');
+            pTwo.classList.remove('hidden');
+            pTwo.style.top = "40%";
+            pTwo.style.right = "20%";
         } else {
-            pTwo.className = 'hidden';
+            pTwo.classList.add('hidden');
+            pTwo.classList.remove('showing');
         }
 
         if (17 < myVideo.currentTime && myVideo.currentTime < 21){
-            pThree.className = 'showing';
+            pThree.classList.add('showing');
+            pThree.classList.remove('hidden');
+            pThree.style.top = "20%";
+            pThree.style.left = "20%";
         } else {
-            pThree.className = 'hidden';
+            pThree.classList.add('hidden');
+            pThree.classList.remove('showing');
         }
 
         if (25 < myVideo.currentTime && myVideo.currentTime < 30){
-            pFour.className = 'showing';
+            pFour.classList.add('showing');
+            pFour.classList.remove('hidden');
+            pFour.style.top = "0%";
+            pFour.style.left = "20%";
         } else {
-            pFour.className = 'hidden';
+            pFour.classList.add('hidden');
+            pFour.classList.remove('showing');
         }
     }
 
@@ -69,7 +90,7 @@
 
         let mouseDistance = dist(mouseX, mouseY, shikanokoX, shikanokoY);
 
-        if (mouseDistance < 200) {
+        if (mouseDistance < 250) {
             shikanokoX += (mouseX - shikanokoX) * easing;
             shikanokoY += (mouseY - shikanokoY) * easing;
 
@@ -83,28 +104,59 @@
         }
     } )
 
-    allPs.forEach(p)
+    // const allPs = document.querySelectorAll('p');
+    // allPs.forEach(function(p){
+    //     const words = p.textContent.split(' ');
+    //     p.innerHTML = '';
 
-    function moveLetter(){
+    //     words.forEach(function(word, index){
+    //         const span = document.createElement('span');
+    //         span.innerText = word + ' ';
+    //         span.classList.add('word');
 
-    }
+    //         span.style.animationDelay = (index * 0.4) + 's';
 
-    // let allPs = document.querySelectorAll('p');
+    //         p.appendChild(span);
+    //     })
+    // })
 
-    // const splicedWord = allPs.split("");
-    // const splicedLetter = splicedWord.split();
+    // const allWords = allPs.innerText.split(' ');
 
-    // const 
-    // console.log(splicedLetter);
+    // allWords.innerHTML = '';
 
-    // const letterCount = 0;
+    
+    // allWords.forEach(function(word, index){
+    //     const span = document.createElement('span');
+    //     span.innerText = word;
+    //     span.classList.add('word');
 
-    // for (i = 0; i < allPs.length; i ++){
-        
+    //     span.style.animationDelay = `${index * 1}s`;
+
+    //     allPs.appendChild(span);
+    // })
+
+    // allPs.forEach(p)
+
+    // function moveLetter(){
+
     // }
 
-    const allPs = document.querySelectorAll('p');
-    const pArray = pOne.split(" ");
+    // // let allPs = document.querySelectorAll('p');
+
+    // // const splicedWord = allPs.split("");
+    // // const splicedLetter = splicedWord.split();
+
+    // // const 
+    // // console.log(splicedLetter);
+
+    // // const letterCount = 0;
+
+    // // for (i = 0; i < allPs.length; i ++){
+        
+    // // }
+
+    // const allPs = document.querySelectorAll('p');
+    // const pArray = pOne.split(" ");
     
-    console.log(pArray);
+    // console.log(pArray);
 })();

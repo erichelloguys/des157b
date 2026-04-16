@@ -9,10 +9,10 @@
 
 .fa-expand-arrows-alt {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 90%;
+    right: 5%;
     font-size: 36px;
-    color: orange;
+    color: rgb(106, 153, 255);
 }
 
 .fa-expand-arrows-alt:hover {
@@ -32,26 +32,49 @@
 }
 
 header {
+    display: block;
+    margin: auto;
     text-align: center;
+    color:rgb(186, 198, 208);
+    background-color: #4e7a5350;
+    background-size: cover;
+        
+    filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
 }
 
-body {
-    cursor: url('images/shikasenbei.png'), auto;
+html {
+    cursor: url('images/shikasenbei.png') 16 16, auto;
+}
+
+body, #storyContainer, p {
+    cursor: inherit;
 }
 
 #storyContainer {
     position: relative;
+    height: 100vh;
 }
 
 p {
+
     padding: 20px;
     position: absolute;
-    top: 20%;
+
+    top: 0%;
+    left: 0%;
+    
     filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
     color:rgb(186, 198, 208);
     font-family: "Supermercado One", sans-serif;
     font-size: 50px;
-    background-image: linear-gradient(to right, #4e7a5380, #639c8120);
+    background-color: #4e7a5350;
+}
+
+.word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.2s forwards;
 }
 
 .supermercado-one-regular {
@@ -66,4 +89,11 @@ p {
 
 .showing {
     opacity: 1;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
