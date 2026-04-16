@@ -17,13 +17,12 @@
     }
     
     const myVideo = document.querySelector('#myVideo');
-    // const mySection = document.querySelector('#mySection');
     const pOne = document.querySelector('#pOne');
     const pTwo = document.querySelector('#pTwo');
     const pThree = document.querySelector('#pThree');
     const pFour = document.querySelector('#pFour');
 
-    const intervalID = setInterval(checkTime, 1000);
+    setInterval(checkTime, 1000);
 
     function checkTime() {
         if (2 < myVideo.currentTime && myVideo.currentTime < 7){
@@ -64,19 +63,48 @@
         return Math.hypot(x2 - x1, y2 - y1);
     }
 
-    window.addEventListener('mousemove', function(e){
-        mouseX = e.clientX;
-        mouseY = e.clientY;
+    window.addEventListener('mousemove', function(event){
+        mouseX = event.clientX;
+        mouseY = event.clientY;
 
         let mouseDistance = dist(mouseX, mouseY, shikanokoX, shikanokoY);
 
-        if (mouseDistance < 150) {
+        if (mouseDistance < 200) {
             shikanokoX += (mouseX - shikanokoX) * easing;
             shikanokoY += (mouseY - shikanokoY) * easing;
 
             shikanoko.style.left = shikanokoX + 'px';
             shikanoko.style.top = shikanokoY + 'px';
+        } else {
+            shikanoko.style.left = 10 + '%';
+            shikanoko.style.top = 0 + '%';
+            shikanokoX = shikanokoRect.left + window.scrollX;
+            shikanokoY = shikanokoRect.top + window.scrollY;
         }
     } )
 
+    allPs.forEach(p)
+
+    function moveLetter(){
+
+    }
+
+    // let allPs = document.querySelectorAll('p');
+
+    // const splicedWord = allPs.split("");
+    // const splicedLetter = splicedWord.split();
+
+    // const 
+    // console.log(splicedLetter);
+
+    // const letterCount = 0;
+
+    // for (i = 0; i < allPs.length; i ++){
+        
+    // }
+
+    const allPs = document.querySelectorAll('p');
+    const pArray = pOne.split(" ");
+    
+    console.log(pArray);
 })();

@@ -39,7 +39,7 @@ body {
     cursor: url('images/shikasenbei.png'), auto;
 }
 
-section {
+#storyContainer {
     position: relative;
 }
 
@@ -48,9 +48,10 @@ p {
     position: absolute;
     top: 20%;
     filter: drop-shadow(5px 5px 5px rgb(0, 0, 0));
+    color:rgb(186, 198, 208);
     font-family: "Supermercado One", sans-serif;
     font-size: 50px;
-    background-image: linear-gradient(to right, #4e7a5350, #639c8150);
+    background-image: linear-gradient(to right, #4e7a5380, #639c8120);
 }
 
 .supermercado-one-regular {
