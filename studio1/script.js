@@ -2,19 +2,32 @@
     'use strict';
     console.log('reading JS');
 
-    const fs = document.querySelector('.fa-expand-arrows-alt');
+    const fsExpand = document.querySelector('.fa-expand-arrows-alt');
+    const faPause = document.querySelector('.fa-circle-pause');
     
-    if (fs) {
-        fs.addEventListener('click', function() {
-            // The fullscreenElement attribute returns null if the element is in windowed mode
-            if (!document.fullscreenElement) {
-                // document.documentElement returns the Element that is a direct child of the document,   which is the <html> element
-                document.documentElement.requestFullscreen();
-            } else {
-                document.exitFullscreen();
-            }
-        });
-    }
+    fsExpand.addEventListener('click', function() {
+        if (!document.fullscreenElement) {
+            fsExpand.classList.remove('fa-expand-arrows-alt');
+            fsExpand.classList.add('fa-minimize');
+            document.documentElement.requestFullscreen();
+        } else {
+            document.exitFullscreen();
+            fsExpand.classList.add('fa-expand-arrows-alt');
+            fsExpand.classList.remove('fa-minimize');
+        }
+    })
+
+    faPause.addEventListener('click', function(){
+        if (myVideo.paused){
+            myVideo.play();
+            faPause.classList.remove('fa-circle-play');
+            faPause.classList.add('fa-circle-pause');
+        } else {
+            myVideo.pause();
+            faPause.classList.remove('fa-circle-pause');
+            faPause.classList.add('fa-circle-play');
+        }
+    })
     
     const myVideo = document.querySelector('#myVideo');
 
