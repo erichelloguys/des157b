@@ -1,77 +1,186 @@
 #myVideo {
-    position: fixed;
+    position: absolute;
     z-index: -1;
-    right: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    object-fit: cover;
+}
+
+#uiControls{
+    padding: 20px;
+    gap: 20px;
+ 
+    position: fixed;
     bottom: 0%;
-    min-width: 100%;
-    min-height: 100%;
+    right: 0%;
+    display: flex;
+
+    font-size: 36px;
+    background-color: #ffffff90;
+    border-radius: 50px;
+    border-width: 5px;
+    border-style:groove;
+;
 }
 
 .fa-expand-arrows-alt {
-    position: absolute;
-    top: 90%;
-    right: 5%;
-    font-size: 36px;
-    color: rgb(106, 153, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(52, 116, 255);
 }
 
 .fa-expand-arrows-alt:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     color: rgb(22, 57, 132);
     cursor: pointer;
 }
 
 .fa-minimize {
-    position: absolute;
-    top: 90%;
-    right: 5%;
-    font-size: 36px;
-    color: rgb(106, 153, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(52, 116, 255);
 }
 
 .fa-minimize:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     cursor: pointer;
     color: rgb(22, 57, 132);
 
 }
 
 .fa-circle-pause {
-    position: absolute;
-    top: 90%;
-    right: 10%;
-    font-size: 36px;
-    color: rgb(106, 153, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(52, 116, 255);
 }
 
 .fa-circle-pause:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     cursor: pointer;
     color: rgb(22, 57, 132);
 
 }
 
 .fa-circle-play {
-    position: absolute;
-    top: 90%;
-    right: 10%;
-    font-size: 36px;
-    color: rgb(106, 153, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(52, 116, 255);
 }
 
 .fa-circle-play:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     cursor: pointer;
     color: rgb(22, 57, 132);
 
 }
 
+.fa-volume-high {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(52, 116, 255);
+}
+
+.fa-volume-high:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(22, 57, 132);
+}
+
+.fa-volume-off {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(52, 116, 255);
+}
+
+.fa-volume-off:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(22, 57, 132);
+}
+
+.fa-rotate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: rgb(52, 116, 255);
+}
+
+.fa-rotate:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    color: rgb(22, 57, 132);
+}
+
+.iconFont {
+    font-size: 15px;
+}
+
+#imgContainer {
+    display: flex;
+    flex-direction: column;
+}
+
 #shikanoko {
+    top: 15%;
+    left: 15%;
+
     position: absolute;
-    top: 0%;
-    left: 10%;
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease-out;
     z-index: 2;
     height: auto;
     max-width: 200px;
+}
+
+#arrow {
+    top: 10%;
+    left: 20%;
+
+    position: absolute;
+    pointer-events: none;
+    transform: translate(50%, -50%);
+    animation: wobble 1s ease-in-out infinite;
+    z-index: 2;
+    height: auto;
+    max-width: 75px;
 }
 
 header {
@@ -91,11 +200,12 @@ html {
 
 body, #storyContainer, p {
     cursor: inherit;
+    margin: 0;
 }
 
 #storyContainer {
     position: relative;
-    height: 100vh;
+    height: 80vh;
 }
 
 p {
@@ -138,5 +248,19 @@ p {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes wobble {
+    0% {
+       transform: translate(10px, 0px);
+    }
+
+    50% {
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        transform: translate(10px, 0px);
     }
 }

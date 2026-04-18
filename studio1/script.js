@@ -3,33 +3,85 @@
     console.log('reading JS');
 
     const fsExpand = document.querySelector('.fa-expand-arrows-alt');
-    const faPause = document.querySelector('.fa-circle-pause');
+    const faPlay = document.querySelector('.fa-circle-play');
+    const faVolume = document.querySelector('.fa-volume-off');
+    const faSwitch = document.querySelector('.fa-rotate');
+
+    const expand = document.querySelector('#expand');
+    const play = document.querySelector('#play');
+    const jpDub = document.querySelector('#jpDub');
+    const volume = document.querySelector('#volume');
     
     fsExpand.addEventListener('click', function() {
         if (!document.fullscreenElement) {
+            expand.innerHTML = '<a>Shrink</a>'
             fsExpand.classList.remove('fa-expand-arrows-alt');
             fsExpand.classList.add('fa-minimize');
             document.documentElement.requestFullscreen();
         } else {
             document.exitFullscreen();
+            expand.innerHTML = '<a>Expand</a>'
             fsExpand.classList.add('fa-expand-arrows-alt');
             fsExpand.classList.remove('fa-minimize');
         }
     })
 
-    faPause.addEventListener('click', function(){
+    faPlay.addEventListener('click', function(){
         if (myVideo.paused){
+            play.innerHTML = '<a>Pause</a>'
+
             myVideo.play();
-            faPause.classList.remove('fa-circle-play');
-            faPause.classList.add('fa-circle-pause');
+            faPlay.classList.remove('fa-circle-play');
+            faPlay.classList.add('fa-circle-pause');
         } else {
+            play.innerHTML = '<a>Play</a>'
+
             myVideo.pause();
-            faPause.classList.remove('fa-circle-pause');
-            faPause.classList.add('fa-circle-play');
+            faPlay.classList.remove('fa-circle-pause');
+            faPlay.classList.add('fa-circle-play');
         }
     })
-    
+
+    faVolume.addEventListener('click', function(){
+        if (myVideo.muted){
+            volume.innerHTML = '<a>Mute</a>'
+
+            myVideo.muted = false;
+            faVolume.classList.remove('fa-volume-off');
+            faVolume.classList.add('fa-volume-high');
+        } else {
+            volume.innerHTML = '<a>Unmute</a>'
+
+            myVideo.muted = true;
+            faVolume.classList.remove('fa-volume-high');
+            faVolume.classList.add('fa-volume-off');
+        }
+    })
+
+    let enSource = true;
+
+    faSwitch.addEventListener('click', function(){
+        if (enSource){
+            jpDub.innerHTML = '<a>EN Dub</a>';
+            enSource = false;
+
+            webmSource.src = 'medias/naraDeerHD_JP.webm';
+            mp4Source.src = 'medias/naraDeerHD_JP.mp4';
+        } else {
+            jpDub.innerHTML = '<a>JP Dub</a>';
+            enSource = true;
+
+            webmSource.src = 'medias/naraDeerHD_EN.webm';
+            mp4Source.src = 'medias/naraDeerHD_EN.mp4';
+        }
+
+        myVideo.load();
+        myVideo.play();
+    })
+     
     const myVideo = document.querySelector('#myVideo');
+    const webmSource = document.querySelector('#webmSource');
+    const mp4Source = document.querySelector('#mp4Source');
 
     const header = document.querySelector('header');
     const pOne = document.querySelector('#pOne');
@@ -76,7 +128,7 @@
         if (25 < myVideo.currentTime && myVideo.currentTime < 30){
             pFour.classList.add('showing');
             pFour.classList.remove('hidden');
-            pFour.style.top = "0%";
+            pFour.style.top = "10%";
             pFour.style.left = "20%";
         } else {
             pFour.classList.add('hidden');
@@ -84,8 +136,10 @@
         }
     }
 
-    const shikanoko = document.querySelector("#shikanoko");
+    const shikanoko = document.querySelector('#shikanoko');
     const shikanokoRect = shikanoko.getBoundingClientRect();
+    const arrow = document.querySelector('#arrow');
+
     let mouseX = 0;
     let mouseY = 0;
     let easing = 0.05;
@@ -106,14 +160,18 @@
         if (mouseDistance < 250) {
             shikanokoX += (mouseX - shikanokoX) * easing;
             shikanokoY += (mouseY - shikanokoY) * easing;
+            arrow.classList.add('hidden');
+            myVideo.style.filter = "blur(3px) saturate(150%)";
 
             shikanoko.style.left = shikanokoX + 'px';
             shikanoko.style.top = shikanokoY + 'px';
         } else {
-            shikanoko.style.left = 10 + '%';
-            shikanoko.style.top = 0 + '%';
+            shikanoko.style.left = 15 + '%';
+            shikanoko.style.top = 15 + '%';
             shikanokoX = shikanokoRect.left + window.scrollX;
             shikanokoY = shikanokoRect.top + window.scrollY;
+            arrow.classList.remove('hidden');
+            myVideo.style.filter = "none";
         }
     } )
 

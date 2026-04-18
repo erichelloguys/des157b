@@ -31,13 +31,17 @@
 <body>
 
     <header>
-        <h1>Blockbuster Video!</h1>
-        <h2>Feeding Deer @ Nara</h2>
+        <!-- <h1>Blockbuster Video!</h1>
+        <h2>Feeding Deer @ Nara</h2> -->
     </header>
 
     <div id="storyContainer">
 
-        <img id="shikanoko" src="images/shikanokoVector.gif" alt="shikanoko">
+        <div id="imgContainer">
+            <img id="shikanoko" src="images/shikanokoVector.gif" alt="shikanoko">
+
+            <img id="arrow" src="images/arrow.png" alt="arrow">
+        </div>
 
         <p id="pOne" class="hidden">
         Look at these unsuspecting deers... I'm going to make them play Squid Games!
@@ -46,11 +50,11 @@
         <!-- <img src="../images/deerAttack.png" id="imgOne" class="hidden" alt="imgOne"> -->
         
         <p id="pTwo" class="hidden">
-        Hahahaha! That's right you animals! Bow to me and feast on the crackers!
+        Hahahaha! That's right you animals! Revere me and feast on the crackers!
         </p>
 
         <p id="pThree" class="hidden">
-        Wait... chotto matte... there's too many of them! Ah, AHHHHHHHH YAMETE TASUKETE!
+        Wait... there's too many of them! Oh no, they're after my bag!
         </p>
 
         <p id="pFour" class="hidden">
@@ -59,19 +63,21 @@
 
     </div>
 
-    <video id="myVideo" poster="images/deerAttack.png" muted autoplay loop playsinline>
+    <video id="myVideo" poster="images/deerAttack.png" muted loop playsinline>
 
-        <source src="medias/naraDeer.webm" type="video/webm">
-        <source src="medias/naraDeerHD.mp4" type="video/mp4">
+        <source id="webmSource" src="medias/naraDeerHD_EN.webm" type="video/webm">
+        <source id="mp4Source" src="medias/naraDeerHD_EN.mp4" type="video/mp4">
 
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="medias/naraDeerHD.mp4">link to the video</a> instead.
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="medias/naraDeerHD_EN.mp4">link to the video</a> instead.
         </p>
 
     </video>
 
     <div id="uiControls">
-        <i class="fas fa-expand-arrows-alt"></i>
-        <i class="fa-solid fa-circle-pause"></i>
+        <i class="fa-solid fa-rotate"><a id="jpDub" class="iconFont">JP Dub</a></i>
+        <i class="fa-solid fa-volume-off"><a id="volume" class="iconFont">Unmute</a></i>
+        <i class="fas fa-expand-arrows-alt"><a id="expand" class="iconFont">Expand</a></i>
+        <i class="fa-solid fa-circle-play"><a id="play" class="iconFont">Play</a></i>
     </div>
 
     </body>
