@@ -6,6 +6,7 @@
     const faPlay = document.querySelector('.fa-circle-play');
     const faVolume = document.querySelector('.fa-volume-off');
     const faSwitch = document.querySelector('.fa-rotate');
+    const faHome = document.querySelector('.fa-house');
 
     const expand = document.querySelector('#expand');
     const play = document.querySelector('#play');
@@ -24,6 +25,10 @@
             fsExpand.classList.add('fa-expand-arrows-alt');
             fsExpand.classList.remove('fa-minimize');
         }
+    })
+
+    faHome.addEventListener('click', function(){
+        window.location.href = '../index.html';
     })
 
     faPlay.addEventListener('click', function(){
