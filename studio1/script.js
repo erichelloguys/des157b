@@ -179,8 +179,10 @@
     let touchY = 0;
 
     window.addEventListener('touchmove', function(event){
-        touchX = event.clientX;
-        touchY = event.clientY;
+        const touch = event.touches[0];
+
+        touchX = touch.clientX;
+        touchY = touch.clientY;
 
         let touchDistance = dist(touchX, touchY, shikanokoX, shikanokoY);
 
