@@ -175,35 +175,6 @@
         }
     } )
 
-    let touchX = 0;
-    let touchY = 0;
-
-    window.addEventListener('touchmove', function(event){
-        const touch = event.touches[0];
-
-        touchX = touch.clientX;
-        touchY = touch.clientY;
-
-        let touchDistance = dist(touchX, touchY, shikanokoX, shikanokoY);
-
-        if (touchDistance < 50) {
-            shikanokoX += (touchX - shikanokoX) * easing;
-            shikanokoY += (touchY - shikanokoY) * easing;
-            arrow.classList.add('hidden');
-            myVideo.style.filter = "blur(3px) saturate(150%)";
-
-            shikanoko.style.left = shikanokoX + 'px';
-            shikanoko.style.top = shikanokoY + 'px';
-        } else {
-            shikanoko.style.left = 15 + '%';
-            shikanoko.style.top = 15 + '%';
-            shikanokoX = shikanokoRect.left + window.scrollX;
-            shikanokoY = shikanokoRect.top + window.scrollY;
-            arrow.classList.remove('hidden');
-            myVideo.style.filter = "none";
-        }
-    } )
-
     // const allPs = document.querySelectorAll('p');
     // allPs.forEach(function(p){
     //     const words = p.textContent.split(' ');
