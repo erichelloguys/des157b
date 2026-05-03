@@ -13,13 +13,14 @@ img {
 /* Page styling */
 body {
     margin: auto;
-    width: 100%;
-    height: auto;
+    width: auto;
+    min-height: 100vh;
     padding: 1em;
     background-image: url("images/studioBG1.png");
     background-size: cover;
     background-position:center center;
     background-repeat: repeat;
+
 
     transition: all 1s;
 }

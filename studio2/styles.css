@@ -1,0 +1,181 @@
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+body {
+    position: relative;
+    margin: auto;
+    width: auto;
+    min-height: 100vh;
+    padding: 1em;
+    background-image: url("images/CYSBackground.png");
+    background-size: cover;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    z-index: 2;
+    position: relative;
+    text-align: center;
+
+    color:rgb(179, 229, 253);
+    font-size: 2rem;
+    font-family: "Rubik 80s Fade", system-ui;;
+    font-weight: 200;
+    font-style: normal;
+    padding: 12px;
+}
+
+main #container {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: 100vh;
+}
+
+
+#road {
+    position: absolute;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#car {
+    position: absolute;
+    max-width: 30vw;
+    bottom: 5vh;
+    left: -65vw;
+    right: 0;
+}
+
+#interface {
+    width: 50vw;
+    height: 50vh;
+    padding: 20px;
+    gap: 20px;
+ 
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: url("images/CYSClouds.png");
+    background-size: contain;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+
+/* 
+#leftArrow {
+    position: absolute;
+
+    width: 5vw;
+    height: 5vh;
+    top: 22.5vh;
+    left: 5vw;
+    padding: 12px;
+    background-image: url("images/CYSLeftArrow.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+}
+
+#rightArrow {
+    position: absolute;
+    width: 5vw;
+    height: 5vh;
+    top: 22.5vh;
+    left: 40vw;
+    padding: 12px;
+    background-image: url("images/CYSRightArrow.png");
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    border: none;
+} */
+
+#interface > form{
+    position: relative;
+    left: 2.5%;
+    border: none;
+}
+
+#interface > form > select{ 
+
+    height: 10vh;
+    font-size: 2vw;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+#billboard {
+    position: absolute;
+    max-width: 50vw;
+    bottom: 0;
+    right: 0;
+}
+
+#emptyArea {
+    z-index: -1;
+    bottom: 75%;
+    right: 5%;
+
+    background-image: url("images/ex4.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    position: absolute;
+    width: 90%;
+    height: 70%;
+}
+
+#purpose {
+    padding: 2%;
+    font-size: 1.25vw;
+    font-family: "ubuntu", system-ui;;
+    font-weight: 200;
+    font-style: normal;
+    line-height: 150%;
+    color:rgb(249, 249, 249);
+
+    z-index: 1;
+    bottom: 5%;
+    right: 5%;
+
+    background-color: rgb(109, 116, 122, 0.5);
+    border-radius: 15px;
+
+    position: absolute;
+    width: 90%;
+    height: 55%;
+    overflow-y: scroll;
+}
+
+#numberOfTrip {
+    color: rgb(88, 199, 255);
+    font-size: 2vw;
+    font-weight: 400;
+}
