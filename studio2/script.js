@@ -31,8 +31,12 @@
 
         if (newValue){
             updateInterface(newValue, globalData);
+            updateEmptyArea(newValue, globalData);
         } else {
             document.querySelector('#purpose').innerHTML = "";
+
+            emptyArea.innerHTML = "<h2 id='billboardText'>Initializing...<h2>";
+            emptyArea.style.backgroundImage = "none";
         }
     })
 
@@ -46,8 +50,11 @@
         document.querySelector('#purpose').innerHTML = html;
     }
 
+    let emptyArea = document.querySelector('#emptyArea');
+
     function updateEmptyArea(value, jsonData){
-        document.querySelector('#emptyArea').innerHTML = '<img>';
+        emptyArea.style.backgroundImage = `url(${jsonData[value].image})`;
+        emptyArea.innerHTML = "";
     }
 
     getData();

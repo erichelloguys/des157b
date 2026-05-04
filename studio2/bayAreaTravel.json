@@ -1,49 +1,58 @@
 {
-   "point1":{
-      "months":"September 2025",
-      "trips":"2",
-      "purpose":"On top of always running errand for my dad, I spent two weeks grinding in Milpitas Library to finish my DES151 projects. I also visited high school friend at the cemetery and apologized for not visiting sooner. She passed from Lukemia, and she is the reason that I refuse to draw my last breath until my hatred for this world is justified."
-   },
-
-   "point2":{
-      "months":"October 2025",
-      "trips":"2",
-      "purpose":"On top of always running errand for my dad, I just chilled and did some shopping. For some reason, I seem to like being on the road and away from Davis."
-   },
-
-   "point3":{
-      "months":"November 2025",
-      "trips":"5",
-      "purpose":"Run errands for dad. November is the month that I was born in. I've long stopped treating my birthday with any real significance. Still, it is a justifiable excuse for grabbing food or going to Karaoke. During the Thanksgiving break, my mother and I narrowly avoided the Valleyfair Mall shooting because I suggested we find a better place for dinner away from the mall. Sometimes my luck can be a little frightening."
-   },
-
-   "point4":{
-      "months":"December 2025",
-      "trips":"6",
-      "purpose":"Run errands for dad. I made a lot of trips in December because finals and Christmas and stuff. I almost failed a couple of classes but barely managed in the end. I spent a week waiting to travel with a friend to the Death Valley, only for them to ghost me in the end. It's not like I couldn't have gone whenever I wanted, so I went to LA instead to visit another friend."
-   },
-
-   "point5":{
-      "months":"January 2026",
-      "trips":"3",
-      "purpose":"Run errands for dad. After celebrating New Year with my dad, winter quarter started so naturally I am back in Davis. But I got bored quickly so I went back to celebrate New Year again with my mom. I also made a trip just for the friend who ghosted me, since they wanted to apologize and exchange gifts. I forgave them but guilt-tripped them into accepting more stuff from me."
-   },
-
-   "point6":{
-      "months":"February 2026",
-      "trips":"5",
-      "purpose":"Run errands for dad. I like to work in Milpitas Library instead of staying in Davis sometimes. Later in the month, I drove to San Francisco to attend an IDSA tour with Whipsaw studio with three passengers on my car. As expected, for me to drive in Bay Area traffic is like fish in water, we arrived the earliest and had the most free time."
-   },
-
-   "point7":{
-      "months":"March 2026",
-      "trips":"1",
-      "purpose":"End of winter quarter so stayed at Davis to write essays and take finals. Then drove back for the one week break which is mostly chill, and ran more errands."
-   },
-
-   "point8":{
-      "months":"April 2026",
-      "trips":"3",
-      "purpose":"Run errands. Also friend mentioned Haidilao is doing a collab with Where Winds Meet, so I was totally expecting more discounts due to her high level account. In the end we kind of got scammed but Haidilao was good experience. I had to drive to Petaluma in the rain to make a delivery and I loved the vibes and scenery in that town. Would visit again."
-   }
+    "point1": {
+        "months": "September 2025",
+        "trips": "2",
+        "purpose": "On top of always running errand for my dad, I spent two weeks grinding in Milpitas Library to finish my DES151 projects. I also visited high school friend at the cemetery and apologized for not visiting sooner. She passed from Lukemia, and she is the reason that I refuse to draw my last breath until my hatred for this world is justified.",
+        "image": "images/september2025.gif",
+        "alt": "des151_ex4"
+    },
+    "point2": {
+        "months": "October 2025",
+        "trips": "2",
+        "purpose": "On top of always running errand for my dad, I just chilled and did some shopping. For some reason, I seem to like being on the road and away from Davis.",
+        "image": "images/october2025.jpg",
+        "alt": "mooncake"
+    },
+    "point3": {
+        "months": "November 2025",
+        "trips": "5",
+        "purpose": "Run errands for dad. November is the month that I was born in. I've long stopped treating my birthday with any real significance. Still, it is a justifiable excuse for grabbing food or going to Karaoke. During the Thanksgiving break, my mother and I narrowly avoided the Valleyfair Mall shooting because I suggested we find a better place for dinner away from the mall. Sometimes my luck can be a little frightening.",
+        "image": "images/november2025.jpg",
+        "alt": "karaoke"
+    },
+    "point4": {
+        "months": "December 2025",
+        "trips": "6",
+        "purpose": "Run errands for dad. I made a lot of trips in December because finals and Christmas and stuff. I almost failed a couple of classes but barely managed in the end. I spent a week waiting to travel with a friend to the Death Valley, only for them to ghost me in the end. It's not like I couldn't have gone whenever I wanted, so I went to LA instead to visit another friend.",
+        "image": "images/december2025.jpg",
+        "alt": "christmasSkeleton"
+    },
+    "point5": {
+        "months": "January 2026",
+        "trips": "3",
+        "purpose": "Run errands for dad. After celebrating New Year with my dad, winter quarter started so naturally I am back in Davis. But I got bored quickly so I went back to celebrate New Year again with my mom. I also made a trip just for the friend who ghosted me, since they wanted to apologize and exchange gifts. I forgave them but guilt-tripped them into accepting more stuff from me.",
+        "image": "images/january2026.jpg",
+        "alt": "alumrock"
+    },
+    "point6": {
+        "months": "February 2026",
+        "trips": "5",
+        "purpose": "Run errands for dad. I like to work in Milpitas Library instead of staying in Davis sometimes. Later in the month, I drove to San Francisco to attend an IDSA tour with Whipsaw studio with three passengers on my car. As expected, for me to drive in Bay Area traffic is like fish in water, we arrived the earliest and had the most free time.",
+        "image": "images/february2026.jpg",
+      "alt": "UCD_IDSA&whipsaw"
+    },
+    "point7": {
+        "months": "March 2026",
+        "trips": "1",
+        "purpose": "End of winter quarter so stayed at Davis to write essays and take finals. Then drove back for the one week break which is mostly chill, and ran more errands.",
+        "image": "images/march2026.jpg",
+      "alt": "baytrail_fremont"
+    },
+    "point8": {
+        "months": "April 2026",
+        "trips": "3",
+        "purpose": "Run errands. Also friend mentioned Haidilao is doing a collab with Where Winds Meet, so I was totally expecting more discounts due to her high level account. In the end we kind of got scammed but Haidilao was good experience. I had to drive to Petaluma in the rain to make a delivery and I loved the vibes and scenery in that town. Would visit again.",
+        "image": "images/april2026.jpg",
+      "alt": "petaluma"
+    }
 }
