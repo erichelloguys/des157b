@@ -46,6 +46,7 @@
 
     function getIndex(value, data) {
         const dataPoints = Object.keys(data);
+        // console.log(dataPoints.indexOf(value));
         return dataPoints.indexOf(value);
     }
 
@@ -73,7 +74,6 @@
         car.style.bottom = `${newY}vh`;
         car.style.maxWidth = `${newWidth}vw`;
     }
-
 
     let html = document.querySelector('#purpose');
     let emptyArea = document.querySelector('#emptyArea');
