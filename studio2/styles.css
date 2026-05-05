@@ -19,6 +19,8 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+
+    transition: all 0.5s ease;
 }
 
 h1 {
@@ -58,11 +60,13 @@ main #container {
     bottom: 5vh;
     left: -65vw;
     right: 0;
+
+    transition: all 0.5s ease;
 }
 
 #interface {
-    width: 50vw;
-    height: 50vh;
+    min-width: 50vw;
+    min-height: 50vh;
     padding: 20px;
     gap: 20px;
 
@@ -136,7 +140,7 @@ main #container {
 
 #billboard {
     position: absolute;
-    max-width: 50vw;
+    max-width: 60vw;
     bottom: 0;
     right: 0;
 }
@@ -161,7 +165,7 @@ main #container {
 
 #purpose {
     padding: 2%;
-    font-size: 1.25vw;
+    font-size: 1.5vw;
     font-family: "ubuntu", system-ui;
     ;
     font-weight: 200;
@@ -195,4 +199,24 @@ main #container {
     font-size: 2vw;
     font-weight: 400;
     font-style: normal;
+}
+
+@media only screen and (max-width: 600px) {
+
+    #billboard {
+        max-width: 85vw;
+    }
+
+    #interface {
+        min-height: 55vh;
+        min-width: 55vw;
+    }
+
+    #interface>form>select {
+        font-size: 3vw;
+    }
+
+    #purpose {
+        font-size: 2.5vw;
+    }
 }

@@ -39,20 +39,20 @@
         "trips": "5",
         "purpose": "Run errands for dad. I like to work in Milpitas Library instead of staying in Davis sometimes. Later in the month, I drove to San Francisco to attend an IDSA tour with Whipsaw studio with three passengers on my car. As expected, for me to drive in Bay Area traffic is like fish in water, we arrived the earliest and had the most free time.",
         "image": "images/february2026.jpg",
-      "alt": "UCD_IDSA&whipsaw"
+        "alt": "UCD_IDSA&whipsaw"
     },
     "point7": {
         "months": "March 2026",
         "trips": "1",
         "purpose": "End of winter quarter so stayed at Davis to write essays and take finals. Then drove back for the one week break which is mostly chill, and ran more errands.",
         "image": "images/march2026.jpg",
-      "alt": "baytrail_fremont"
+        "alt": "baytrail_fremont"
     },
     "point8": {
         "months": "April 2026",
         "trips": "3",
         "purpose": "Run errands. Also friend mentioned Haidilao is doing a collab with Where Winds Meet, so I was totally expecting more discounts due to her high level account. In the end we kind of got scammed but Haidilao was good experience. I had to drive to Petaluma in the rain to make a delivery and I loved the vibes and scenery in that town. Would visit again.",
         "image": "images/april2026.jpg",
-      "alt": "petaluma"
+        "alt": "petaluma"
     }
 }
