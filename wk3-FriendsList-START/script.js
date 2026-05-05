@@ -6,8 +6,8 @@
 
 
     // Initialize Parse
-    // Parse.initialize("p5eCw7oCHYwSDCB2tUezSX7IM0GDVDCZtvFMcBui", "yG14zETRsIvOVZEA2k1zY1FnqUW9HpDSIH8FAeFy"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
-    // Parse.serverURL = "https://parseapi.back4app.com/";
+    Parse.initialize("p5eCw7oCHYwSDCB2tUezSX7IM0GDVDCZtvFMcBui", "yG14zETRsIvOVZEA2k1zY1FnqUW9HpDSIH8FAeFy"); //PASTE HERE YOUR Back4App APPLICATION ID AND YOUR JavaScript KEY
+    Parse.serverURL = "https://parseapi.back4app.com/";
 
     const newBtn = document.querySelector('#newbtn');
     const editBtns = document.querySelectorAll('.fa-edit');
