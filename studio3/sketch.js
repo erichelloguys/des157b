@@ -21,7 +21,7 @@ let speedOfRotation = 3;
 let acceleRotation = 0.3;
 
 function setup() {
-    createCanvas(500, 500);
+    createCanvas(windowWidth, windowHeight);
     rectMode(CENTER);
     background("#9B0B0B");
 }
